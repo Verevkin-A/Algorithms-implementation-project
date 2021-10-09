@@ -177,11 +177,7 @@ void Stack_Push( Stack *stack, char data ) {
 		Stack_Error(SERR_PUSH);
 
 	//increase stack by one and set its value on data value 
-	} else { 
-
-		stack->topIndex++; 
-		stack->array[stack->topIndex] = data;
-	}
+	} else { stack->array[++(stack->topIndex)] = data; }
 }
 
 /* Konec c202.c */
